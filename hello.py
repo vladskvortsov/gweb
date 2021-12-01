@@ -10,5 +10,4 @@ def main():
 def answer():
   return "Героям Слава!!!"
 
-if __name__ == "__main__":
-app.run() 
+
