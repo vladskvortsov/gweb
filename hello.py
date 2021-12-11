@@ -4,6 +4,7 @@ app = Flask(__name__)
 
 color = os.environ.get('APP_COLOR')
 
+
 @app.route("/")
 def main():
 print (color)
