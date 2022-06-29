@@ -1,4 +1,4 @@
-DOCKERFILE:
+Dockerfile:
 
 FROM alpine
 
