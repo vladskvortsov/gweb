@@ -2,12 +2,8 @@ import os
 from flask import Flask
 app = Flask(__name__)
 
-<<<<<<< HEAD
-=======
 color = os.environ.get('APP_COLOR')
 
-
->>>>>>> origin/color
 @app.route("/")
 def main():
   return "Привіт"
@@ -17,5 +13,5 @@ def answer():
   return "Героям Слава!!!"
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0")
+    app.run(host="0.0.0.0" )
  
