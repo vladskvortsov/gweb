@@ -1,4 +1,4 @@
-Simple hello file
+Simple helloworld app
 
 Dockerfile:
 
