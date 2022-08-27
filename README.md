@@ -1,7 +1,8 @@
-Simple helloworld app
+# Simple helloworld app
 
-Dockerfile:
+## Dockerfile:
 
+```sh
 FROM alpine
 
 MAINTAINER vlad <vladskvortsov96@gmail.com>
@@ -19,3 +20,4 @@ RUN apk add sudo
 RUN sudo pip install flask --upgrade
 
 ENTRYPOINT FLASK_APP=/opt/app.py flask run --host 0.0.0.0
+```
