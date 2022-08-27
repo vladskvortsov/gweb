@@ -6,8 +6,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def main():
-    huinya = 'yyyyyyyyyyyy'
-    return render_template('index.html', huinya=huinya)
+    text = 'yyyyyyyyyyyy'
+    return render_template('index.html', txt=text)
 
 
 @app.route("/Слава_Україні")
