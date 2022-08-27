@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def main():
-    huinya = 'yyyyyyyyyyyyy'
+    huinya = 'yyyyyyyyyyyy'
     return render_template('index.html', huinya=huinya)
 
 
