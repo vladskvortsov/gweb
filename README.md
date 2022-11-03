@@ -5,19 +5,32 @@
 ```sh
 FROM alpine
 
-MAINTAINER vlad <vladskvortsov96@gmail.com>
+MAINTAINER vladskvortsov
 
-COPY hello.py /opt/app.py
+COPY app.py /opt/
 
-RUN apk update
+COPY templates /opt/templates/
 
-RUN apk add python3
+RUN apk --update add python3 py-pip && pip install flask --upgrade
 
-RUN apk add py-pip
+ENTRYPOINT FLASK_APP=/opt/app.py flask run --host 0.0.0.0 --port 5000
 
-RUN apk add sudo
+```
 
-RUN sudo pip install flask --upgrade
+To run the app, first build docker image:
 
-ENTRYPOINT FLASK_APP=/opt/app.py flask run --host 0.0.0.0
+```sh
+docker build . -t alpine-flask
+```
+
+And run with setting a port:
+
+```sh
+docker run -d -p 5000:5000 alpine-flask
+```
+
+Now make sure all working accesing:
+
+```sh
+localhost:5000
 ```
